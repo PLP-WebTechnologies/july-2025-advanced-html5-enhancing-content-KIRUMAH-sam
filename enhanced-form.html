@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recipe Sharing Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #c74b705d;
+      padding: 10px;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f9f9f9;
+    }
+    form {
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
+    fieldset {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Share Your Favorite Recipes</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Featured Recipe: Spaghetti Carbonara</h2>
+      <img src="Spaghetti Carborana.jpg" alt="Spaghetti Carbonara" width="400" />
+
+      <h3>Ingredients</h3>
+      <ul>
+        <li>200g spaghetti</li>
+        <li>100g pancetta</li>
+        <li>2 large eggs</li>
+        <li>50g pecorino cheese</li>
+        <li>Fresh black pepper</li>
+        <li>Salt</li>
+      </ul>
+
+      <h3>Instructions</h3>
+      <ol>
+        <li>Boil spaghetti in salted water until al dente.</li>
+        <li>Fry pancetta until crispy.</li>
+        <li>Beat eggs with grated cheese and pepper.</li>
+        <li>Drain pasta and mix quickly with pancetta and egg mixture.</li>
+        <li>Serve immediately.</li>
+      </ol>
+
+      <h3>Nutrition Facts</h3>
+      <table>
+        <tr>
+          <th>Nutrient</th>
+          <th>Amount per Serving</th>
+        </tr>
+        <tr>
+          <td>Calories</td>
+          <td>420 kcal</td>
+        </tr>
+        <tr>
+          <td>Protein</td>
+          <td>18 g</td>
+        </tr>
+        <tr>
+          <td>Fat</td>
+          <td>17 g</td>
+        </tr>
+        <tr>
+          <td>Carbohydrates</td>
+          <td>48 g</td>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+  <h2>Featured Recipe: Ugali na Mayai</h2>
+  <img src="Ugali mayai 😋.jpeg" alt="Ugali with eggs" width="400" />
+
+  <h3>Ingredients</h3>
+  <ul>
+    <li>2 cups maize flour</li>
+    <li>4 cups water</li>
+    <li>2 eggs</li>
+    <li>1 tomato, chopped</li>
+    <li>1 onion, chopped</li>
+    <li>Salt and oil</li>
+  </ul>
+
+  <h3>Instructions</h3>
+  <ol>
+    <li>Boil water in a pot.</li>
+    <li>Add maize flour gradually while stirring.</li>
+    <li>Cook until thick and firm. Let sit covered.</li>
+    <li>Sauté onions, add tomatoes, and fry the eggs.</li>
+    <li>Serve the eggs with ugali hot.</li>
+  </ol>
+
+  <h3>Nutrition Facts</h3>
+  <table>
+    <tr>
+      <th>Nutrient</th>
+      <th>Amount per Serving</th>
+    </tr>
+    <tr>
+      <td>Calories</td>
+      <td>350 kcal</td>
+    </tr>
+    <tr>
+      <td>Protein</td>
+      <td>12 g</td>
+    </tr>
+    <tr>
+      <td>Fat</td>
+      <td>10 g</td>
+    </tr>
+    <tr>
+      <td>Carbohydrates</td>
+      <td>50 g</td>
+    </tr>
+  </table>
+
+  <h3>Watch How to Cook</h3>
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=lU4ZBJd91Yk" 
+    title="Ugali and Eggs Recipe" frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</section>
+
+
+    <section>
+      <h2>Submit Your Recipe</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Recipe Information</legend>
+          <label for="recipe-name">Recipe Name:</label><br />
+          <input type="text" id="recipe-name" name="recipe-name" required minlength="3" /><br /><br />
+
+          <label for="cook-time">Cooking Time (minutes):</label><br />
+          <input type="number" id="cook-time" name="cook-time" required min="1" /><br /><br />
+
+          <label for="ingredients">Ingredients (comma-separated):</label><br />
+          <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Author Details</legend>
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="name">Your Name:</label><br />
+          <input type="text" id="name" name="name" placeholder="Optional" autocomplete="name" />
+        </fieldset>
+
+        <fieldset>
+          <legend>Additional Info</legend>
+          <p>Type of Cuisine:</p>
+          <input type="radio" id="italian" name="cuisine" value="Italian" required />
+          <label for="italian">Italian</label><br />
+          <input type="radio" id="asian" name="cuisine" value="Asian" />
+          <label for="asian">Asian</label><br />
+          <input type="radio" id="african" name="cuisine" value="African" />
+          <label for="african">African</label><br /><br />
+
+          <p>Dietary Restrictions:</p>
+          <input type="checkbox" id="vegetarian" name="diet[]" value="Vegetarian" />
+          <label for="vegetarian">Vegetarian</label><br />
+          <input type="checkbox" id="gluten-free" name="diet[]" value="Gluten-Free" />
+          <label for="gluten-free">Gluten-Free</label><br /><br />
+
+          <label for="photo">Upload a photo:</label><br />
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </fieldset>
+
+        <input type="submit" value="Submit Recipe" />
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kirumah's Recipe Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
